@@ -1,0 +1,51 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/admin"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/shop"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/product"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/checkout-success"
+  to = "/checkout-success.html"
+  status = 200
+
+[[redirects]]
+  from = "/checkout-cancel"
+  to = "/checkout-cancel.html"
+  status = 200
+
+[[redirects]]
+  from = "https://3dswissdesign.netlify.app/*"
+  to = "https://www.3dswissdesign.com/:splat"
+  status = 301
+  force = true
+
+[functions]
+  node_bundler = "esbuild"
