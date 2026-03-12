@@ -1,0 +1,13 @@
+# Netlify redirects for SPA
+# Todas as rotas redirecionam para index.html
+
+/admin              /index.html   200
+/shop               /index.html   200
+/about              /index.html   200
+/contact            /index.html   200
+/product            /index.html   200
+/checkout-success   /checkout-success.html   200
+/checkout-cancel    /checkout-cancel.html    200
+
+# Redirect para www
+https://3dswissdesign.netlify.app/*  https://www.3dswissdesign.com/:splat  301!
